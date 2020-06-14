@@ -1,5 +1,12 @@
 DIR=$(pwd)
 
+if [ -f "${HOME}"/.vimrc ]; then
+    mv "${HOME}"/.vimrc "${HOME}"/.vimrc.bak."$(date +%m-%d-%H-%m )"
+fi
+if [ -f "${HOME}"/.zshrc ]; then
+    mv "${HOME}"/.zshrc "${HOME}"/.zshrc.bak."$(date +%m-%d-%H-%m )"
+fi
+
 ln -s "${DIR}"/.vimrc "${HOME}"/.vimrc
 ln -s "${DIR}"/.zshrc "${HOME}"/.zshrc
 
