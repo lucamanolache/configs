@@ -15,3 +15,5 @@ git clone https://github.com/sjl/gundo.vim.git .vim/bundle/gundo
 git clone https://github.com/tyrannicaltoucan/vim-deep-space.git .vim/bundle/deep-space
 git clone https://github.com/tpope/vim-sensible.git .vim/bundle/sensible
 ln -s ${DIR}/.vim ~/.vim
+
+source ~/.zshrc
