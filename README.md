@@ -1,3 +1,5 @@
+![Docker Image CI](https://github.com/NotLucaM/configs/workflows/Docker%20Image%20CI/badge.svg)
+
 # Installation
 
 Running ```./init.sh``` will clone all of the needed git repos and move them into your home directory using symbolic links.
