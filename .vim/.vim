@@ -1,0 +1,1 @@
+/home/luca/Documents/configs/.vim

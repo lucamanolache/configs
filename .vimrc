@@ -41,8 +41,8 @@ set wrap
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Status line
-set laststatus=2
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ PWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c 
+" set laststatus=2
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ PWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c 
 
 " Mapping "
 
@@ -123,6 +123,7 @@ set wrap
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Status line
+let g:airline_theme='bubblegum'
 set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ PWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c 
 
