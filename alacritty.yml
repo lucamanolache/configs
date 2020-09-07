@@ -1,0 +1,68 @@
+#     _    _                 _ _____ _______   __
+#    / \  | | __ _  ___ _ __(_)_   _|_   _\ \ / /
+#   / _ \ | |/ _` |/ __| '__| | | |   | |  \ V /
+#  / ___ \| | (_| | (__| |  | | | |   | |   | |
+# /_/   \_\_|\__,_|\___|_|  |_| |_|   |_|   |_|
+#
+# See this wiki page for more info:
+# https://github.com/jwilm/alacritty/wiki
+
+font:
+  normal:
+    family: "MesloLGS NF"
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  scale_with_dpi: true
+
+  use_thin_strokes: false
+
+# Window configurations
+window:
+  dimensions:
+    columns: 0
+    lines: 0
+
+  padding:
+    x: 0
+    y: 0
+
+  decorations: full
+
+key_bindings:
+    - { key: N, mods: Command, action: SpawnNewInstance }
+
+# Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x1e2127'
+    foreground: '0xabb2bf'
+
+  # Normal colors
+  normal:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'
+
+  # Bright colors
+  bright:
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xffffff'
