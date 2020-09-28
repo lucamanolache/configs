@@ -1,0 +1,78 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.34,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 2098,
+               "width": 2541,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Mozilla Firefox",
+            "percent": 0.77,
+            "swallows": [
+               {
+               // "class": "^Firefox$",
+               // "instance": "^Navigator$",
+               // "title": "^Mozilla\\ Firefox$",
+               // "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 462,
+               "width": 738,
+               "x": 0,
+               "y": 0
+            },
+            "name": "i3-save-tree --workspace 4 > ~/.config/i3/java-coding.json",
+            "percent": 0.23,
+            "swallows": [
+               {
+               // "class": "^Gnome\\-terminal$",
+               // "instance": "^gnome\\-terminal\\-server$",
+               // "title": "^i3\\-save\\-tree\\ \\-\\-workspace\\ 4\\ \\>\\ \\~\\/\\.config\\/i3\\/java\\-coding\\.json$",
+               // "window_role": "^gnome\\-terminal\\-window\\-071dda2d\\-a082\\-4149\\-beee\\-3726a584dcb4$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "current_border_width": 4,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 2098,
+       "width": 1281,
+       "x": 0,
+       "y": 32
+    },
+    "name": "photonvision – Calibration3dPipelineSettings.java [PhotonServer.main]",
+    "percent": 0.66,
+    "swallows": [
+       {
+       // "class": "^jetbrains\\-idea$",
+       // "instance": "^jetbrains\\-idea$",
+       // "title": "^photonvision\\ \\–\\ Calibration3dPipelineSettings\\.java\\ \\[PhotonServer\\.main\\]$"
+       }
+    ],
+    "type": "con"
+}
+
