@@ -1,0 +1,9 @@
+[submodule ".config/.config/zsh/powerlevel10k"]
+	path = .config/.config/zsh/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k
+[submodule ".config/.config/zsh/zsh-autosuggestions"]
+	path = .config/.config/zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".config/.config/zsh/zsh-syntax-highlighting"]
+	path = .config/.config/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
