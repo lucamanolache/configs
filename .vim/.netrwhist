@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/luca/Library'
+let g:netrw_dirhist_8='/Users/luca'
+let g:netrw_dirhist_7='/Users/luca/Library'
+let g:netrw_dirhist_6='/Users/luca'
+let g:netrw_dirhist_5='/Users/luca/Documents'
+let g:netrw_dirhist_4='/Users/luca'
+let g:netrw_dirhist_3='/Users/luca/Documents'
+let g:netrw_dirhist_2='/Users/luca/.vim/colors'
+let g:netrw_dirhist_1='/Users/luca'
