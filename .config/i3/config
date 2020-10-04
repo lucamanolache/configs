@@ -27,6 +27,7 @@ gaps outer $outer_gaps
 
 # #---Floating Windows---# #
 for_window [class="jetbrains-.*" title="win0"] floating enable border none
+for_window [title="^Minecraft .*"] floating enable; resize shrink height 5000px; resize shrink width 10000px
 
 
 # #---Dropdown Windows---# #
