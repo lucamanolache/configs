@@ -25,6 +25,10 @@ gaps inner $inner_gaps
 gaps outer $outer_gaps
 
 
+# #---Floating Windows---# #
+for_window [class="jetbrains-.*" title="win0"] floating enable border none
+
+
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
 for_window [instance="dropdown_*"] floating enable
