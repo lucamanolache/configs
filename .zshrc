@@ -16,6 +16,7 @@ export EDITOR='vi'
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/history.zsh
 # source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 autoload -Uz  compinit  #Basic auto/tab complete:  
@@ -33,6 +34,7 @@ alias todo="todo.sh"
 alias ls="ls -G"
 alias la="ls -a"
 alias ra=ranger
+alias vi="vim"
 
 alias emacs="emacsclient -create-frame --quiet --alternate-editor='vim'"
 

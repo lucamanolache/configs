@@ -42,8 +42,8 @@ rofi -no-lazy-grab -show drun \
 -line-padding 10 \
 -padding 20 \
 -width 30 \
--xoffset 68 -yoffset -70 \
--location 7 \
+-xoffset 0 -yoffset 45 \
+-location 1 \
 -columns 2 \
 -show-icons -icon-theme "Papirus" \
 -font "Fantasque Sans Mono 10" \
