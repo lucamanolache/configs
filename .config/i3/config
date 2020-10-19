@@ -21,6 +21,17 @@ for_window [window_role=floating] floating enable
 
 focus_follows_mouse no
 
+client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #1F1F1F
+client.unfocused        #0d1010 #212121 #d9d9d9 #424242 #1F1F1F
+client.focused          #d9d9d9 #cecece #e53935 #fb8c00 #e53935
+
+
+# #---Autostart#---# #
+exec_always --no-startup-id alttab
+exec_always --no-startup-id exec dwall firewatch
+exec_always --no-startup-id exec $HOME/.config/polybar/launch.sh &
+exec_always --no-startup-id exec picom
+
 
 # #---Gaps---# #
 for_window [class="^.*"] border pixel 2
@@ -44,13 +55,6 @@ for_window [instance="dropdown_dropdowncalc"] resize set 800 300
 for_window [instance="dropdown_tmuxdd"] border pixel 3
 for_window [instance="dropdown_dropdowncalc"] border pixel 2
 for_window [instance="dropdown_*"] move position center
-
-
-# #---Polybar---# #
-exec_always --no-startup-id exec $HOME/.config/polybar/launch.sh &
-
-# #---Background---# #
-exec_always --no-startup-id exec dwall firewatch
 
 
 # #---Modes---# #
