@@ -76,7 +76,7 @@ mode "resize" {
 
 
 # #---Basic Bindings---# #
-bindsym $mod+Return 		exec alacritty
+bindsym $mod+Return 		exec st
 bindsym $mod+Shift+Return	exec --no-startup-id firefox
 
 bindsym $mod+Shift+space 	floating toggle
