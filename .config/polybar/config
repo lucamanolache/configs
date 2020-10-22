@@ -1,240 +1,323 @@
-[colors]
-background        = #e0020202
-foreground        = #ffffff
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	    ____        __      __              
+;;	   / __ \____  / /_  __/ /_  ____ ______
+;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
+;;	/_/    \____/_/\__, /_.___/\__,_/_/     
+;;	              /____/                    
+;;
+;; Created By Aditya Shakya @adi1090x
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[constants]
-padding = 1
+[color]
 
-[bar/right]
-background            = #e0020202
-border-color          = ${colors.foreground}
-border-size           = 0
-border-transparent    = true
-bottom                = false
-cursor-click          = pointer
-cursor-scroll         = ns-resize
-fixed-center          = true
-foreground            = ${colors.foreground}
-height                = 30
-line-color            = #f00
-line-size             = 0
-module-margin-left    = 0
-module-margin-right   = 0
-monitor               = eDP-1
-monitor-fallback      = eDP-1
-offset-x              = 90%:-30
-offset-y              = 15
-override-redirect     = true
-padding-left          = 0
-padding-right         = 0
-radius                = 0
-scroll-down           = i3wm-wsprev
-scroll-up             = i3wm-wsnext
-tray-position         = none
-width                 = 11%
+bg = #282a36
+fg = #f8f8f2
+fg-alt = #44475a
 
-modules-center         = pulseaudio wlan battery  
-modules-right          = date
+acolor = #ff79c6
+curgent = #ff79c6
+coccupied = #bd93f9
 
-font-0 = mononoki Nerd Font:weight=bold:fontformat=truetype:size=16:antialias=true;4
-font-1 = Noto Sans:fontformat=truetype:size=14:antialias=true;4
+## Material Colors
 
-[bar/middle]
-inherit = bar/right
+red = #e53935
+pink = #d81b60
+purple = #8e24aa
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
 
-offset-x              = 40%
-offset-y              = 15
-width                 = 20%
-background            = #e0020202
-modules-left        = 
-modules-center        = i3
-modules-right        = 
-;    _          _   _                
-;   | |__  __ _| |_| |_ ___ _ _ _  _ 
-;   | '_ \/ _` |  _|  _/ -_) '_| || |
-;   |_.__/\__,_|\__|\__\___|_|  \_, |
-;                               |__/ 
+;==========================================================
+
+[bar/main]
+monitor = 
+width = 100%
+height = 40
+offset-x = 5%
+offset-y = 2%
+bottom = false
+fixed-center = false
+line-size = 2
+
+background = ${color.bg}
+foreground = ${color.fg}
+
+border-size = 3
+border-color = ${color.bg}
+
+module-margin-left = 1
+module-margin-right = 1
+
+;==========================================================
+
+font-0 = "Fantasque Sans Mono:pixelsize=12;2"
+font-1 = "Symbols Nerd Font:size=14;4"
+
+;==========================================================
+
+cursor-click = pointer
+
+;tray-position = right
+;tray-padding = 0
+;tray-maxsize = 16
+enable-ipc = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+;== Module Location ========================================================
+
+modules-left = menu workspaces
+modules-right = cpu mpd pkg volume network date powermenu
+ 
+;== Modules ========================================================
+
+[module/menu]
+type = custom/text
+content = 
+alt-icon = 
+content-padding = 2
+content-background = ${color.acolor}
+content-foreground = ${color.fg}
+click-left = $HOME/.config/polybar/scripts/menu
+click-middle = $HOME/.config/polybar/scripts/color-switch.sh
+click-right = $HOME/.config/polybar/scripts/menu_full
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = false
+format-padding = 0
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
+icon-6 = 7;
+icon-7 = 8;
+icon-8 = 9;
+
+icon-default =  
+
+format = <label-state>
+label-active = %icon%
+label-occupied = %icon%
+label-urgent = %icon%
+label-empty = %icon%
+
+label-occupied-padding = 2
+label-empty-padding = 2
+label-urgent-padding = 2
+label-active-padding = 2
+
+label-active-foreground = ${color.acolor}
+label-urgent-foreground = ${color.curgent}
+label-empty-foreground = ${color.fg}
+label-occupied-foreground = ${color.coccupied}
+
+label-active-underline = ${color.acolor}
+label-urgent-underline = ${color.curgent}
+label-occupied-underline = ${color.coccupied}
+
+[module/term]
+type = custom/text
+content = 
+content-foreground = ${color.fg-alt}
+click-left = termite &
+click-middle = urxvt &
+click-right = xfce4-terminal &
+
+[module/files]
+type = custom/text
+content = 
+content-padding = 1
+content-foreground = ${color.fg-alt}
+click-left = thunar &
+click-right = ranger &
+
+[module/browser]
+type = custom/text
+content = 
+content-padding = 1
+content-foreground = ${color.fg-alt}
+click-left = chromium &
+click-right = firefox &
+
+[module/settings]
+type = custom/text
+content = 漣
+content-padding = 1
+content-foreground = ${color.fg-alt}
+click-left = xfce4-settings &
+click-right = lxappearance &
+
+;==========================================================
+
+[module/mpd]
+type = internal/mpd
+;format-online = <toggle> <label-song> 
+format-online =  <label-song> 
+
+icon-play = 
+icon-pause = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+;==========================================================
+
+[module/pkg]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/updates.sh
+;exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+;label = %{A1:termite -e "aurman -Syyu" & disown:} %{A3:termite -e "aurman -Syyu" & disown:}%output%%{A} %{A}
+tail = true
 
 [module/battery]
-adapter                                 = ADP1
-battery                                 = BAT0
+type = internal/battery
+full-at = 99
+time-format = %H:%M
+battery = BAT1
+adapter = AC
+format-charging = <animation-charging> <label-charging>
+;label-charging = %percentage%% (%time%)
+label-charging = %percentage%%
+format-discharging = <ramp-capacity> <label-discharging>
+;label-discharging = %percentage%% (%time%)
+label-discharging = %percentage%%
+format-full = <label-full>
 
-format-charging                         = <label-charging>
-format-charging-foreground              = #ffffff
+format-full-prefix = " "
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
-format-discharging                      = <ramp-capacity><label-discharging>
-format-discharging-foreground           = #ffffff
+ramp-capacity-0-foreground = ${color.red}
+ramp-capacity-foreground   = ${color.fg}
+bar-capacity-width = 10
 
-format-full-foreground                  = #ffffff
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
 
+animation-charging-framerate = 750
 
+[module/volume]
+type = internal/alsa
+;speaker-mixer = Speaker
+;headphone-mixer = Headphone
+;headphone-id = 16
+;mapped = true
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+format-muted-prefix = "婢"
+label-muted = MUTE
 
-full-at                                 = 99
+ramp-volume-0 = 婢
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 墳
+ramp-volume-5 = 墳
+ramp-volume-6 = 
 
-label-charging                          = 
-format-charging-padding                 = ${constants.padding}
+[module/network]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/check-network
+click-left = networkmanager_dmenu &
+click-right = networkmanager_dmenu &
+tail = true
 
-label-discharging                       = 
-format-discharging-padding              = ${constants.padding}
-
-label-full                              = 
-format-full-padding                     = ${constants.padding}
-
-poll-interval                           = 5
-
-type                                    = internal/battery
-
-ramp-capacity-0                         = 
-ramp-capacity-1                         = 
-ramp-capacity-2                         = 
-ramp-capacity-3                         = 
-ramp-capacity-4                         = 
-ramp-capacity-5                         = 
-ramp-capacity-6                         = 
-ramp-capacity-7                         = 
-ramp-capacity-8                         = 
-ramp-capacity-9                         = 
-
-;     _      _       
-;  __| |__ _| |_ ___ 
-; / _` / _` |  _/ -_)
-; \__,_\__,_|\__\___|
-                    
 [module/date]
-date                        = %D
+type = internal/date
+interval = 30
+label =  %time%
+time =  %H:%M %p
+time-alt =  %Y-%m-%d
 
-format                      = <label>
-interval                    = 1.0
+[module/powermenu]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${color.acolor}
+content-foreground = ${color.fg}
+click-left = $HOME/.config/polybar/scripts/sysmenu
+click-right = $HOME/.config/polybar/scripts/sysmenu
 
-label                       = %{A6:time-admin:}%time%   %{A}
-format-background           = #e0020202
-format-foreground           = #77B9C4
+[module/cpu]
+type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
+interval = 1
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+;   
+format-prefix = " "
+format-prefix-foreground = #cd1f3f
+format-underline = #645377
 
-time                        = %I:%M
-time-alt                    = %A, %B %e  %I:%M:%S %p
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label> <ramp-coreload>
 
-type                        = internal/date
+format-padding = 2
 
-
-;  _ ____             
-; (_)__ /_ __ ___ __  
-; | ||_ \ V  V / '  \ 
-; |_|___/\_/\_/|_|_|_|
-                     
-[module/i3]
-format                      = <label-state> <label-mode>
-index-sort                  = true
-pin-workspaces              = false
-type                        = internal/i3
-wrapping-scroll             = false
-
-label-focused-font = 1
-label-unfocused-font = 1
-label-urgent-font = 1
-label-mode-font = 2
-
-label-mode                  = 煉 %mode%
-label-mode-background       = #ff0000
-label-mode-foreground       = #ffffff
-label-mode-padding          = 1
-
-label-focused               = 
-label-focused-background    = ${colors.background}
-label-focused-foreground    = #77B9C4
-label-focused-padding       = 1
-
-label-unfocused             = 
-label-unfocused-background  = ${colors.background}
-label-unfocused-foreground  = #ffffff
-label-unfocused-padding     = 1
-
-label-urgent                = 
-label-urgent-background     = ${colors.background}
-label-urgent-foreground     = #ff0000
-label-urgent-padding        = 1
-
-label-visible               = 
-label-visible-foreground    = #ffffff
-label-visible-padding       = 1
-
-;              _         
-;    _ __ _  _| |___ ___ 
-;   | '_ \ || | (_-</ -_)
-;   | .__/\_,_|_/__/\___|
-;   |_|                  
-
-[module/pulseaudio]
-format-muted                      = <label-muted>
-format-muted-foreground           = #ffffff
-format-muted-background-0    = #6C6AF2
-format-muted-background-1    = #4648FB
-
-format-volume                     = <ramp-volume>
-format-volume-foreground          = #ffffff
-format-volume-background-0    = #6C6AF2
-format-volume-background-1    = #4648FB
-
-interval                          = 5
-
-label-muted                       = %{A3:pavucontrol:}婢%{A}
-format-muted-padding              = ${constants.padding}
-label-volume                      = %{A3:pavucontrol:}%{A}
-format-volume-padding             = ${constants.padding}
-
-ramp-volume-0                     = %{A3:pavucontrol:}奄%{A}
-ramp-volume-1                     = %{A3:pavucontrol:}奔%{A}
-ramp-volume-2                     = %{A3:pavucontrol:}墳%{A}
-
-sink                              = alsa_output.pci-0000_00_1f.3.hdmi-stereo-extra1
-
-type                              = internal/pulseaudio
-
-use-ui-max                        = false
-
-;           _           
-;   __ __ _| |__ _ _ _  
-;   \ V  V / / _` | ' \ 
-;    \_/\_/|_\__,_|_||_|
-;                       
-
-[module/wlan]
-format-connected                      = %{A1:tilix -e wicd-curses:}直<label-connected>%{A}
-format-connected-foreground           = #ffffff
-format-connected-background-0    = #6C6AF2
-format-connected-background-1    = #4648FB
-
-format-disconnected                   = %{A1:tilix -e wicd-curses:}睊%{A}
-format-disconnected-foreground        = #ffffff
-format-disconnected-background-0    = #6C6AF2
-format-disconnected-background-1    = #4648FB
-
-interface                             = wlp3s0
-
-interval                              = 3.0
-
-label-connected                       = 
-format-connected-padding              = ${constants.padding}
-format-disconnected-padding           = ${constants.padding}
+; Available tokens:
+;   %percentage% (default) - total cpu load
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label-font = 3
+label = CPU: %percentage%%
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 3
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 3
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 3
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 3
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 3
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 3
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 3
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 3
+ramp-coreload-7-foreground = #ff5555
 
 
-type                                  = internal/network
-
-;          _   _   _              
-;  ___ ___| |_| |_(_)_ _  __ _ ___
-; (_-</ -_)  _|  _| | ' \/ _` (_-<
-; /__/\___|\__|\__|_|_||_\__, /__/
-;                        |___/    
-                                      
-[settings]
-;compositing-background = screen
-;compositing-background = xor
-;compositing-border     = over
-;pseudo-transparency    = true
-compositing-foreground  = source
-screenchange-reload     = true
-
-[global/wm]
-
-; vim:ft        = dosini
-  margin-bottom = 940
-  margin-top    = 940
+;== EOF ========================================================
