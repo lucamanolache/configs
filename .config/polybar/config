@@ -17,9 +17,9 @@ bg = #282a36
 fg = #f8f8f2
 fg-alt = #44475a
 
-acolor = #ff79c6
-curgent = #ff79c6
-coccupied = #bd93f9
+acolor = #bd93f9 
+curgent = #bd93f9
+coccupied = #ff79c6
 
 ## Material Colors
 
@@ -236,12 +236,12 @@ label-volume = %percentage%%
 format-muted-prefix = "婢"
 label-muted = MUTE
 
-ramp-volume-0 = 婢
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 奔
+ramp-volume-3 = 墳
 ramp-volume-4 = 墳
-ramp-volume-5 = 墳
+ramp-volume-5 = 
 ramp-volume-6 = 
 
 [module/network]

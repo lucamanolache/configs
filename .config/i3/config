@@ -79,6 +79,7 @@ mode "resize" {
 # #---Basic Bindings---# #
 bindsym $mod+Return 		exec st
 bindsym $mod+Shift+Return	exec --no-startup-id firefox
+bindsym $mod+Shift+Control+Return exec --no-startup-id firefox --new-instance --ProfileManager
 
 bindsym $mod+Shift+space 	floating toggle
 bindsym $mod+space		focus mode_toggle

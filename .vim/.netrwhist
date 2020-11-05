@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/luca/.QtWebEngineProcess'
 let g:netrw_dirhist_8='/home/luca/.config'
 let g:netrw_dirhist_7='/home/luca/.config/kitty'
 let g:netrw_dirhist_6='/home/luca/.config/JetBrains/IntelliJIdea2020.2/extensions'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_3='/home/luca/.config/ibus'
 let g:netrw_dirhist_2='/home/luca/.config/ibus/bus'
 let g:netrw_dirhist_1='/home/luca/.config/polybar'
 let g:netrw_dirhist_0='/home/luca/.config/autostart'
-let g:netrw_dirhist_9='/Users/luca/Library'
