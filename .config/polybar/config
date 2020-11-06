@@ -13,13 +13,13 @@
 
 [color]
 
-bg = #282a36
-fg = #f8f8f2
+bg = #2e3440
+fg = #eceff4
 fg-alt = #44475a
 
-acolor = #bd93f9 
-curgent = #bd93f9
-coccupied = #ff79c6
+acolor = #8fbcbb
+curgent = #8fbcbb
+coccupied = #81a1c1
 
 ## Material Colors
 

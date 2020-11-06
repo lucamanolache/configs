@@ -21,15 +21,15 @@ for_window [window_role=floating] floating enable
 
 focus_follows_mouse no
 
-client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #44475a
-client.unfocused        #0d1010 #212121 #d9d9d9 #424242 #44475a
-client.focused          #d9d9d9 #cecece #e53935 #ff79c6 #bd93f9
+client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #2e3440
+client.unfocused        #0d1010 #212121 #d9d9d9 #424242 #2e3440
+client.focused          #d9d9d9 #cecece #e53935 #5e81ac #8fbcbb
 
 
 # #---Autostart#---# #
 exec_always --no-startup-id exec $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id alttab
-exec_always --no-startup-id feh --bg-fill ~/.wallpaper/arch.png
+exec --no-startup-id feh --bg-fill "$HOME"/.wallpaper/nordic-mountain.jpg
 #exec_always --no-startup-id exec dwall firewatch
 #exec_always --no-startup-id exec picom
 

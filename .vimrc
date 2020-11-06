@@ -8,6 +8,8 @@ filetype indent on
 
 set background=dark
 
+colorscheme nord
+
 set cursorline
 
 " Sets a number of lines above the cursor when scrolling through large files
