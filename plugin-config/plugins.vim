@@ -11,6 +11,7 @@ let g:ale_disable_lsp = 1
 
 " Plugins "
 Plug 'vim-airline/vim-airline'
+Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key'
