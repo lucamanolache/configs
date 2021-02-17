@@ -18,6 +18,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
+Plug 'dracula/vim'
 
 call plug#end()
 
