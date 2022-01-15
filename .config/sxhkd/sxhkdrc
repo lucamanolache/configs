@@ -3,6 +3,9 @@
 super + Return
 	st
 
+super + shift + Return
+	brave
+
 super + t
       tabbed -r 2 st -w ''
 
