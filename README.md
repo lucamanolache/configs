@@ -67,7 +67,7 @@
    Then after the dependencies are installed, use GNU Stow to sym link the files
    
    ```sh
-   stow .
+   $ stow .
    ```
 
    </details>
