@@ -66,6 +66,15 @@ alias llm='exa -lbGd --git --sort=modified'                            # long li
 alias la='exa -lbhHigUmuSa --git --color-scale'  # all list
 alias lx='exa -lbhHigUmuSa@ --git --color-scale' # all + extended list
 
+# BAT
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+alias fp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+
+function preview () {
+  curl -s $1 | bat
+}
+
 # specialty views
 alias lS='exa -1'                                                              # one column, just names
 alias lt='exa --tree --level=2'                                         # tree
