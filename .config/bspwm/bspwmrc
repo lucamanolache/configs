@@ -19,7 +19,7 @@ bspc config focus_follows_pointer true
 
 # autostart up applications 
 ~/.config/polybar/launch.sh &
-picom & 
+DISPLAY=":0" picom -b &
 feh --bg-fill $HOME/wallpapers/lighthouse.png &
 xrdb merge ~/.Xresources &
 sxhkd 

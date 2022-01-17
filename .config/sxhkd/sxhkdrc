@@ -6,11 +6,14 @@ super + Return
 super + shift + Return
 	brave
 
-super + t
+super + ctrl + t
       tabbed -r 2 st -w ''
 
 super + d
         rofi -show drun
+
+alt + Tab
+        rofi -show window
 
 super + n
         bash ~/.local/bin/vi_padding
@@ -49,7 +52,7 @@ super + g
 # state/flags
 
 # set the window state
-super + {d,shift + d,s,f}
+super + {t,shift + d,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
